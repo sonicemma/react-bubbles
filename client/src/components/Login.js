@@ -39,7 +39,7 @@ const Login = (props) => {
           autocomplete='off'
         />
         <input 
-          type='text'
+          type='password'
           placerholder='password'
           name='password'
           value={login.password}
