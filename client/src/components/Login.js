@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import axios from 'axios';
 import {axiosWithAuth} from '../utils/axiosWithAuth';
 
 const Login = (props) => {
@@ -21,7 +20,7 @@ const Login = (props) => {
       .post('/login', login)
       .then(res => {
         localStorage.setItem('token', res.data.payload)
-        props.history.push('/bubble-age');
+        props.history.push('/bubblepage');
       }) .catch(err => {
         console.log('Error logging in: ', err)
       });
@@ -41,6 +40,7 @@ const Login = (props) => {
         />
         <input 
           type='text'
+          placerholder='password'
           name='password'
           value={login.password}
           onChange={handleChange}
